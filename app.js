@@ -11,6 +11,9 @@ const port = process.env.PORT || 8080;
 app.use(express.json());
 app.use(cors());
 
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
 app.get('/api/flower', searchflower.getFlower);
 //app.get('/api/v1/recipe/id/:id', searchRecipe.searchRecipeByID);
 //app.get('/api/v1/recipe/name/:name', searchRecipe.searchRecipeByName);

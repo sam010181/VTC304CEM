@@ -5,8 +5,8 @@ const user = require('./modules/users');
 const favourite = require('./modules/favourites');
 const comment = require('./modules/comments');
 const app = express();
-//const port = process.env.PORT || 8080;
-const port = "http://localhost:8080";
+const port = process.env.PORT || 8080;
+
 
 app.use(express.json());
 app.use(cors());

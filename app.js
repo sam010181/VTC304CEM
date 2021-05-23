@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const searchRecipe = require('./modules/recipe');
+const searchflower = require('./modules/flower');
 const user = require('./modules/users');
 const favourite = require('./modules/favourites');
 const comment = require('./modules/comments');
@@ -11,7 +11,7 @@ const port = "http://localhost:8080";
 app.use(express.json());
 app.use(cors());
 
-app.get('/api/flower', searchRecipe.getRecipe);
+app.get('/api/flower', searchflower.getFlower);
 //app.get('/api/v1/recipe/id/:id', searchRecipe.searchRecipeByID);
 //app.get('/api/v1/recipe/name/:name', searchRecipe.searchRecipeByName);
 

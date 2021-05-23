@@ -11,7 +11,7 @@ const port = "http://localhost:8080";
 app.use(express.json());
 app.use(cors());
 
-//app.get('/api/flower', searchRecipe.getRecipe);
+app.get('/api/flower', searchRecipe.getRecipe);
 //app.get('/api/v1/recipe/id/:id', searchRecipe.searchRecipeByID);
 //app.get('/api/v1/recipe/name/:name', searchRecipe.searchRecipeByName);
 

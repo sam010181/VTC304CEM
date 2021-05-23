@@ -1,6 +1,6 @@
 const { flowermodel, Usermodel } = require('./models');
 
-exports.getRecipe = (request, response) => {
+exports.getFlower = (request, response) => {
     flowermodel.find({}, (error, flower) => {
 	if(error){
         return response.status(400).send({

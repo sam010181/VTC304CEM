@@ -22,13 +22,18 @@ function checkFavourites(request, response, flowers) {
                     for (let i = 0; i < result.favourite.length; i++) {
                         if (""+flower._id == ""+result.favourite[i]) {
                             flower.isFavourite = true;
+                            
                         } else {
                             if (flower.isFavourite != true) {
                                 flower.isFavourite = false;
                                 
+                                
                             }
                         }
                     }
+                }
+                for (let flower of flowers){
+                    console.log(flower.isFavourite);
                 }
                 return response.send(flowers);
             }

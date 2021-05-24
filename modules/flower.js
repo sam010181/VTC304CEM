@@ -25,9 +25,7 @@ function checkFavourites(request, response, flowers) {
                             
                         } else {
                             if (flower.isFavourite != true) {
-                                flower.isFavourite = false;
-                                
-                                
+                                flower.isFavourite = false;  
                             }
                         }
                     }

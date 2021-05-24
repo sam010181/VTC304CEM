@@ -11,20 +11,21 @@ function checkFavourites(request, response, flowers) {
                 message: 'Error'
             });
         } else {
-            if (result.favourites == null) {
+            if (result.favourite == null) {
                 for (let flower of flowers) {
                     flower.isFavourite = false;
                 }
                 return response.send(flowers);
             } else {
-                const array = result.favourites.split(",");
+                
                 for (let flower of flowers) {
-                    for (let i = 0; i < array.length; i++) {
-                        if (flower.name == array[i]) {
+                    for (let i = 0; i < result.favourite.length; i++) {
+                        if (""+flower._id == ""+result.favourite[i]) {
                             flower.isFavourite = true;
                         } else {
                             if (flower.isFavourite != true) {
                                 flower.isFavourite = false;
+                                
                             }
                         }
                     }

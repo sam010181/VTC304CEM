@@ -3,6 +3,7 @@ const mongoose = require('./database');
 const FlowerSchema = new mongoose.Schema({
     id : String,
     description:String,
+    picture:String
 });
 const UserSchema = new mongoose.Schema({
     username: String,

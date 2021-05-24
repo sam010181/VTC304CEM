@@ -30,9 +30,6 @@ function checkFavourites(request, response, flowers) {
                         }
                     }
                 }
-                for (let flower of flowers){
-                    console.log(flower.isFavourite);
-                }
                 return response.send(flowers);
             }
         }
@@ -41,7 +38,7 @@ function checkFavourites(request, response, flowers) {
 
 
 exports.getFlower = (request, response) => {
-    Flower.find({}, (error, Flowers) => {
+    Flower.aggregate([{ $sample: { size: parseInt(request.query.num) } }], (error, Flowers) => {
 	if(error){
         return response.status(400).send({
             message: 'Error'
